@@ -69,7 +69,7 @@ header {
 }
 
 .barraNav ul li a:hover{
-    vertical-align: top;
+    font-size: 30px;
 }
 
 /*Elementos del letrero principal*/
