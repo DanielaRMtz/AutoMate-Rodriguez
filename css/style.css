@@ -159,6 +159,10 @@ footer ul{
     width: 50%;
 }
 
+.iconos:hover{
+    width: 60%;
+}
+
 .logo{
     font-family: 'Playfair Display', serif;
     font-size: 50px;
