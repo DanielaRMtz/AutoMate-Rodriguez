@@ -68,6 +68,10 @@ header {
     justify-content: space-around;
 }
 
+.barraNav ul li a:hover{
+    vertical-align: top;
+}
+
 /*Elementos del letrero principal*/
 .roadmap{
     grid-area: road;
