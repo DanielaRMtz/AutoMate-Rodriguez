@@ -10,7 +10,12 @@
 }
 
 body{
-    display: flex;
+    display: grid;
+    grid-template-areas: 
+    "head head head head"
+    "cono cono text text"
+    "fotr fotr fotr fotr";
+    grid-template-columns: repeat(4,1fr);
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     background-color: #0a1f50;
@@ -19,6 +24,7 @@ body{
 
 /*Elementos dentro del header*/
 header {
+    grid-area: head;
     width: 100%;
     height: 100px;
     display: flex;
@@ -60,20 +66,23 @@ header {
 
 /*Elementos del contenido principal*/
 #titulo{
+    grid-area: cono;
+    margin-top: 150px;
     display: flex;
     margin-top: 150px;
     font-size: 50px;
 }
 
 .contenido{
+    grid-area: text;
+    margin-top: 150px;
     display: flex;
     border-radius: 30px;
     font-size: 25px;
-    position: absolute;
     padding: 20px;
     top:150px;
     right: 5%;
-    width:50%;
+    width:100%;
 
     background-color:#3665A4;
 }
@@ -86,7 +95,7 @@ header {
 
 /*Elementos en el footer*/
 footer{
-    position: absolute;
+    grid-area: fotr;
     bottom: 0%;
     width: 100%;
     height: 100px;
@@ -121,3 +130,33 @@ footer ul{
     width: 50%;
 }
  
+@media screen and (max-width: 930px) {
+
+    body{
+        display: grid;
+        grid-template-areas: 
+        "head"
+        "cono"
+        "text"
+        "fotr";
+        grid-template-columns: 1fr;
+    }
+    
+
+    .barraNav{
+        display: none;
+    }
+
+    #letreroIn span{
+        display: flex;
+        flex-direction: row;
+        margin: 2%;
+        font-size: 20px; 
+    }
+
+    #letreroIn img{
+        display: none;
+    }
+
+
+}
