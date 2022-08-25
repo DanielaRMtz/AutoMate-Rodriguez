@@ -1,74 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/stylecontacto.css">
-    <title>AutóMate: Contacto</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->     <!--Link CSS de Bootsrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>AutóMate: Contacto</title>
+    </head>
 <body>
     <header>
-        <!--Logo de la página que siempre nos va a llevar a la página principal-->
-        <h1 class="logo">
-            <a href="../index.html">AutóMate</a>
-        </h1>
-        <!--Barra de navegación-->
-        <nav class="barraNav">
-            <!--Lista no ordenada de enlaces-->
-            <ul>
-                <li><a href="./conocenos.html">Conócenos</a></li>
-                <li><a href="./tutoriales.html">Tutoriales</a></li>
-                <li><a href="./proyectos.html">Proyectos Personalizados</a></li>
-                <li><a href="./preguntas.html">Preguntas Frecuentes</a></li>
-                <li><a href="./contacto.html">Contacto</a> </li>
-            </ul>
+        <!--Barra de nevagción de Bootsrap-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top estiloHeader">
+              <a class="navbar-brand logo ms-3" href="../index.html">AutóMate</a>
+              <button class="navbar-toggler mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="ms-5 pe-3 collapse navbar-collapse desplegable" id="navbarCollapse">
+                <ul class="navbar-nav text-light text-center align-middle">
+                  <li class="nav-item">
+                    <a class="nav-link active navbarstyle" aria-current="page" href="./conocenos.html">Conócenos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active navbarstyle" aria-current="page" href="./tutoriales.html">Tutoriales</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active navbarstyle" aria-current="page" href="./proyectos.html">Proyectos Personalizados</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active navbarstyle" aria-current="page" href="./preguntas.html">Preguntas Frecuentes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active navbarstyle" aria-current="page" href="./contacto.html">Contacto</a>
+                  </li>                  
+                </ul>
+              </div>
         </nav>
     </header>
-    <form>
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre"/></br></br>
-        </div>
-        <div>
-            <label for="emailc">E-mail:</label>
-            <input type="email" name="emailc"/><br/><br/>
-        </div>                    
 
-        <label for="problema">Describe tu problema:</label><br/>
-        <textarea name="problema" id="descProblema" cols="30" rows="10"></textarea><br/><br/>
+    <p class="container-sm px-5 bienvtutos">Póngase en contacto con nosotros.</p>
 
-        <label for="conocimiento">¿Tienes conocimientos previos?</label><br/>
-        <div>
-            <input type="radio" name="conocimiento" value="Si"/>
-            <span>Si</span>
+    <form class="row g-3">
+      <div class="col-md-7 px-5">
+        <label for="inputNombre" class="form-label">Nombre: </label>
+        <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese su nombre">
+      </div>
+
+      <div class="col-md-5 px-5">
+        <label for="inputEmail" class="form-label">E-Mail: </label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese su e-mail">
+      </div>
+
+      <div class="col-md-5 px-5 input-group mb-3">
+        <span class="input-group-text">Describe tu problema:</span>
+        <textarea class="form-control" aria-label="Problema"></textarea>
+      </div>
+
+      <div class="col-md-5 px-5 mb-3 form-check">
+        <p>¿Tienes conociemientos previos?</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkyes">
+          <label class="form-check-label" for="checkyes">
+            Si
+          </label>
         </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkno">
+          <label class="form-check-label" for="checkyno">
+            No
+          </label>
+        </div>
+
+      </div>
         
-        <div>
-            <input type="radio" name="conocimiento" value="No"/>
-            <span>No</span>
-        </div>
+      </div>      
 
-        <div>
-            </br>
-            <input type="submit" value="Enviar Formulario"/>
-        </div>
+      <div class="col-12 px-5 mb-5">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+
+    </form> 
+       
+      
+
+      
+
+      <button type="button" class="container btn btn-primary">Primary</button>
 
     </form>
     
-    <footer>
-        <div class="logo">AutóMate
+    <footer class="row mx-0">
+        <div class="col-lg-8">
+            <p class="ms-2 logo">AutóMate</p>
             <p>2022 Todos los derechos reservados.</p>
         </div>  
-        <ul>
-            <li><a title="E-Mail" href="mailto:esdanyrdzmtz@hotmail.com"><img class="iconos" src="../email.png" alt="E-Mail" /></a></li>
-            <li><a title="Facebook" href="https://es-la.facebook.com/"><img class="iconos" src="../fb.png" alt="Facebook" /></a></li>
-            <li><a title="Instagram" href="https://www.instagram.com/"><img class="iconos" src="../insta.png" alt="Instagram" /></a></li>
-            <li><a title="LinkedIn" href="https://mx.linkedin.com/"><img class="iconos" src="../linkedin.png" alt="LinkedIn" /></a></li>
+        <ul class="col-lg-3">
+            <li><a class="p-2" title="E-Mail" href="mailto:esdanyrdzmtz@hotmail.com"><img class="iconos" src="../email.png" alt="E-Mail" /></a></li>
+            <li><a class="p-2" title="Facebook" href="https://es-la.facebook.com/"><img class="iconos" src="../fb.png" alt="Facebook" /></a></li>
+            <li><a class="p-2" title="Instagram" href="https://www.instagram.com/"><img class="iconos" src="../insta.png" alt="Instagram" /></a></li>
+            <li><a class="p-2" title="LinkedIn" href="https://mx.linkedin.com/"><img class="iconos" src="../linkedin.png" alt="LinkedIn" /></a></li>
         </ul>
         
     </footer>
+
+    <!-- JavaScript Bundle with Popper -->  <!--Link JavaScript de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        
 </body>
+
 
 
 </html>
